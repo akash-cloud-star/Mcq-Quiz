@@ -1,0 +1,85 @@
+#include<stdio.h>
+struct p
+{
+    int arr[20];
+} p1;
+
+int main()
+{
+    int i=0,x;
+    float count = 0, count1=0, count2=0;
+    int ans[20];
+    p1.arr[0]=3;
+    p1.arr[1]=3;
+    p1.arr[2]=3;
+    p1.arr[3]=4;
+    p1.arr[4]=3;
+    p1.arr[5]=2;
+    p1.arr[6]=2;
+    p1.arr[7]=4;
+    p1.arr[8]=1;
+    p1.arr[9]=3;
+    p1.arr[10]=3;
+    p1.arr[11]=1;
+    p1.arr[12]=3;
+    p1.arr[13]=2;
+    p1.arr[14]=3;
+    p1.arr[15]=4;
+    p1.arr[16]=2;
+    p1.arr[17]=3;
+    p1.arr[18]=3;
+    p1.arr[19]=1;
+    printf("A. 10+20=?\n\t1. 10\t2. 20\t3. 30\t4. 40\n\n");
+    printf("B. 50-20=?\n\t1. 10\t2. 20\t3. 30\t4. 40\n\n");
+    printf("C. 60X50=?\n\t1. 1000\t2. 2000\t3. 3000\t4. 4000\n\n");
+    printf("D. 12/3=?\n\t1. 1\t2. 2\t3. 3\t4. 4\n\n");
+    printf("E. (10+20)/10=?\n\t1. 1\t2. 2\t3. 3\t4. 4\n\n");
+    printf("F. (5-3)X12=?\n\t1. 12\t2. 24\t3. 36\t4. 48\n\n");
+    printf("G. 106X106-94X94=?\n\t1. 2004\t2. 2400\t3. 1904\t4. 1906\n\n");
+    printf("H. 12^2=?\n\t1. 111\t2. 122\t3. 133\t4. 144\n\n");
+    printf("I. 8^3X8^2X(8^-5)=?\n\t1. 1\t2. 0\t3. 8\t4. 2\n\n");
+    printf("J. 150:250=?\n\t1. 6:10\t2. 15:25\t3. 3:5\t4. 15:10\n\n");
+    printf("K. 13-13X111-111=?\n\t1. 1319\t2. 1443\t3. -1541\t4. 1\n\n");
+    printf("L. 6-(5-3)+10=?\n\t1. 14\t2. 17\t3. 21\t4. 27\n\n");
+    printf("M. 3456/12/8=?\n\t1. 33.5\t2. 36.5\t3. 36\t4. 33\n\n");
+    printf("N. 839.093+31.005-136.048=?\n\t1. 734.50\t2. 734.05\t3. 724.05\t4. 733.25\n\n");
+    printf("O. 4^3=?\n\t1. 4\t2. 16\t3. 64\t4. 80\n\n");
+    printf("P. 4^2+3^2=?\n\t1. 5\t2. 10\t3. 20\t4. 20\n\n");
+    printf("Q. square root of 81=?\n\t1. 12\t2. 9\t3. 6\t4. 3\n\n");
+    printf("R. 5!=?\n\t1. 20\t2. 60\t3. 120\t4. 200\n\n");
+    printf("S. square root of 169=?\n\t1. 3\t2. 9\t3. 13\t4. 20\n\n");
+    printf("T. {36/(-9)}/{(-24)/6}=?\n\t1. 1\t2. 2\t3. 3\t4. -1\n\n");
+    for(i=0; i<20; i++)
+    {
+        printf("Answer for question no %d\n",i+1);
+        scanf("%d",&ans[i]);
+    }
+    for(i=0; i<20; i++)
+    {
+        if(ans[i]==p1.arr[i])
+        {
+            count1++;
+        }
+        else
+        {
+            count2++;
+        }
+    }
+    printf("\n\nFinal result : %.3f\n",count=(count1*1)-(count2*0.25));
+    printf("\nDo you want to continue...???\nPress 1 to continue or 0 to exit\n\n");
+    scanf("%d",&x);
+    if(x==1)
+    {
+        main();
+    }
+    else if(x==0)
+    {
+        return 0;
+    }
+    else
+    {
+        printf("Wrong input, press 0 or 1\n");
+    }
+
+}
+
